@@ -24,7 +24,7 @@ class Mailer
     body_text
   end
 
-  def self.deliver_by_telegram(to:, body:, sort:)
+  def self.deliver_telegram(to:, body:, sort:)
     # To send a telegram report you need to start chat with @Testrepotiobot !!!
 
     bot = Telegram::Bot::Client.new(TOKEN)
@@ -32,7 +32,7 @@ class Mailer
     true
   end
 
-  def self.deliver_by_mail(to:, subject:, body:, sort:)
+  def self.deliver_mail(to:, subject:, body:, sort:)
     Pony.mail({
                 subject: subject,
                 body: format_report(body: body, sort: sort),
@@ -58,7 +58,7 @@ end
 #   { code: 'A-001', guest: 'guest@email.com', entity: 'reservation', type: 'modified', created_at: '2019-06-08 23:06:45', updated_at: '2019-06-08 23:40:02' }
 # ]
 
-# Mailer.deliver_by_mail(
+# Mailer.deliver_mail(
 #    to: 'testreport@bk.ru',
 #    subject: 'Report',
 #    body: report,
@@ -66,7 +66,7 @@ end
 # )
 
 # To send a telegram report you need to start chat with @Testrepotiobot !!!
-# Mailer.deliver_by_telegram(
+# Mailer.deliver_telegram(
 #  to: '733017529', # Chat_id sting or integer
 #  body: report,
 #  sort: 'type' # type of sort (string) code,guest,entity,type,created_at,updated_at

@@ -42,7 +42,7 @@ created_at: '2019-06-08 23:26:45', updated_at: '2019-06-08 23:40:02' },
   end
 
   it 'should send email message' do
-    email = Mailer.deliver_by_mail(
+    email = Mailer.deliver_mail(
       to: 'badwolf6661@gmail.com',
       subject: 'Report',
       body: report_for_sending,
@@ -52,7 +52,7 @@ created_at: '2019-06-08 23:26:45', updated_at: '2019-06-08 23:40:02' },
   end
 
   it 'should send telegram message' do
-    message = Mailer.deliver_by_telegram(
+    message = Mailer.deliver_telegram(
       to: '733017529', # Chat_id sting or integer
       body: report_for_sending,
       sort: 'type' # type of sort (string) code,guest,entity,type,created_at,updated_at
