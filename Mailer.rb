@@ -37,14 +37,14 @@ class Mailer
                 subject: subject,
                 body: format_report(body: body, sort: sort),
                 to: to,
-                from: 'testrubyreport@mail.ru',
+                from: 'rubytest@list.ru',
                 via: :smtp,
                 via_options: {
                   address: 'smtp.mail.ru',
                   port: '465',
                   tls: true,
-                  user_name: 'testrubyreport@mail.ru',
-                  password: 'eUS1cLg31TLvrJCi6wC6', # Top secret =)
+                  user_name: 'rubytest@list.ru',
+                  password: 'ikpwxdAa5eghB1iVtHA6', # Top secret =)
                   authentication: :plain
                 }
               })
