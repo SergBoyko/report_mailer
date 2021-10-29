@@ -43,7 +43,7 @@ created_at: '2019-06-08 23:26:45', updated_at: '2019-06-08 23:40:02' },
 
   it 'should send email message' do
     email = Mailer.deliver_by_mail(
-      to: 'badwolf6661@gmail.com',
+      to: 'testrubyreport@mail.ru',
       subject: 'Report',
       body: report_for_sending,
       sort: 'type'

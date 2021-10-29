@@ -33,19 +33,18 @@ class Mailer
   end
 
   def self.deliver_by_mail(to:, subject:, body:, sort:)
-    # TODO make check params
     Pony.mail({
                 subject: subject,
                 body: format_report(body: body, sort: sort),
                 to: to,
-                from: 'testreport@bk.ru',
+                from: 'testrubyreport@mail.ru',
                 via: :smtp,
                 via_options: {
                   address: 'smtp.mail.ru',
                   port: '465',
                   tls: true,
-                  user_name: 'testreport@bk.ru',
-                  password: 'S0mfW7HQDeFvHKY5DdjR', # Top secret =)
+                  user_name: 'testrubyreport@mail.ru',
+                  password: 'eUS1cLg31TLvrJCi6wC6', # Top secret =)
                   authentication: :plain
                 }
               })
