@@ -55,12 +55,12 @@ end
 
 # Example
 # report =  [
-#     { code: 'A-001', guest: 'guest@email.com', entity: 'reservation', type: 'confirmed', created_at: '2019-06-08 23:06:45', updated_at: '2019-06-08 23:06:45' },
-#  { code: 'A-001', guest: 'guest@email.com', entity: 'reservation', type: 'modified', created_at: '2019-06-08 23:06:45', updated_at: '2019-06-08 23:40:02' }
+#   { code: 'A-001', guest: 'guest@email.com', entity: 'reservation', type: 'confirmed', created_at: '2019-06-08 23:06:45', updated_at: '2019-06-08 23:06:45' },
+#   { code: 'A-001', guest: 'guest@email.com', entity: 'reservation', type: 'modified', created_at: '2019-06-08 23:06:45', updated_at: '2019-06-08 23:40:02' }
 # ]
 
-#Mailer.deliver_by_mail(
-#    to: 'badwolf6661@gmail.com',
+# Mailer.deliver_by_mail(
+#    to: 'testreport@bk.ru',
 #    subject: 'Report',
 #    body: report,
 #    sort: 'type'

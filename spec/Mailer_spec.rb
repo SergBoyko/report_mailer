@@ -43,22 +43,19 @@ created_at: '2019-06-08 23:26:45', updated_at: '2019-06-08 23:40:02' },
 
   it 'should send email message' do
     email = Mailer.deliver_by_mail(
-      to: 'testreport@bk.ru',
+      to: 'badwolf6661@gmail.com',
       subject: 'Report',
-      report: {
-        body: report_for_sending,
-        sort: 'type'
-      })
+      body: report_for_sending,
+      sort: 'type'
+      )
     expect(email).to be true
   end
 
   it 'should send telegram message' do
     message = Mailer.deliver_by_telegram(
       to: '733017529', # Chat_id sting or integer
-      report: {
-        body: report_for_sending,
-        sort: 'type' # type of sort (string) code,guest,entity,type,created_at,updated_at
-      }
+      body: report_for_sending,
+      sort: 'type' # type of sort (string) code,guest,entity,type,created_at,updated_at
     )
     expect(message).to be true
   end
